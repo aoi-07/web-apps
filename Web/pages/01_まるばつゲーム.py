@@ -12,18 +12,19 @@ st.set_page_config(layout="wide")
 
 btnlist = [[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]]
 
-st.title("Web版 まるばつゲーム")
+st.title("まるばつゲーム")
+st.text("202360323")
 msg_place = st.empty()
 resetbtn = st.button("リセット",key="reset")
 
 # ボタンの見た目変更
 st.markdown("""
     <style>
-    /* 盤面のボタンを特定して、縦のサイズを大幅にアップ */
+    /* 盤面のボタンを特定してサイズ指定 */
     div[data-testid="stHorizontalBlock"] button {
         width: 230% !important;
-        height: 80px !important; /* 高さを思い切って250px以上にしてみる */
-        font-size: 30px !important; /* 文字もそれに合わせて巨大化 */
+        height: 80px !important; 
+        font-size: 30px !important; 
         font-weight: bold !important;
     }
     </style>
