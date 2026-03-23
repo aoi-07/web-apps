@@ -1,5 +1,9 @@
 import streamlit as st
 
+#認証前はサイドバーを非表示
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.set_page_config(initial_sidebar_state="collapsed")
+
 #pass
 AUTH_password = "pass"
 

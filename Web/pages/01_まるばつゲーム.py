@@ -2,6 +2,11 @@ import streamlit as st
 import random
 import time
 
+#認証チェック
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.warning("メインページでパスワードを入力してください。")
+    st.stop()
+
 #画面設定をワイドに設定
 st.set_page_config(layout="wide")
 
