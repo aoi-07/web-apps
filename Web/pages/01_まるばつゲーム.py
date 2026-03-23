@@ -13,7 +13,7 @@ st.set_page_config(layout="wide")
 btnlist = [[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]]
 
 st.title("まるばつゲーム")
-st.text("202360323")
+st.caption("20260322作成/20260323更新")
 msg_place = st.empty()
 resetbtn = st.button("リセット",key="reset")
 
@@ -51,7 +51,7 @@ if resetbtn:
 
 #勝敗の表示
 if st.session_state.msg != "":
-    msg_place.write(st.session_state.msg)
+    msg_place.markdown("### " + st.session_state.msg)
     st.session_state.result = True
 
 #勝敗の判定
